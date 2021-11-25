@@ -7,10 +7,13 @@ const dcomment = document.querySelector('#dcomment')
 
 tweetForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    const username = tweetForm.elements.username.value;
-    const comment = tweetForm.elements.comment.value;
+    const usernameInput = tweetForm.elements.username;
+    const commentInput = tweetForm.elements.comment;
 
-    addcomment(username, comment)
+    addcomment(username.value, comment.value)
+
+    usernameInput.value ="";
+    commentInput.value ="";
 });
 
 const addcomment = (username, comment) =>{
