@@ -16,6 +16,7 @@ tweetForm.addEventListener('submit', function (e) {
 const addcomment = (username, comment) =>{
     const user = document.createElement('h3')
     const newComment = document.createElement('p')
+    newComment.classList = 'newcomment';
 
     user.append(username);
     newComment.append(comment);
